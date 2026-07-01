@@ -18,7 +18,18 @@ function UnderConstructionPage() {
           <img className="brand-image" src={logo} alt="Corwerx logo" />
         </div>
 
-        <h1>Under Construction</h1>
+        <h1>Website under constrution</h1>
+
+        <section className="contact-info" aria-label="Contact information">
+          <div className="contact-details">
+            <p>
+              <a href="mailto:estimate@corwerx.com">estimate@corwerx.com</a>
+            </p>
+            <p>
+              <a href="tel:+14125155988">412-515-5988</a>
+            </p>
+          </div>
+        </section>
 
         <section className="services-section" aria-label="What we do">
           <ServiceGrid services={services} />

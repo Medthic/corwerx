@@ -115,11 +115,41 @@ a {
 .construction-card h1 {
   margin: 0.55rem 0;
   font-family: 'Segoe UI Variable Text', 'Segoe UI', Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-  font-size: clamp(1.1rem, 2.5vw, 1.6rem);
+  font-size: clamp(1.35rem, 3.2vw, 2.2rem);
   font-weight: 300;
   letter-spacing: 0.18em;
   text-transform: uppercase;
   color: rgba(255, 255, 255, 0.84);
+}
+
+.contact-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 0.4rem;
+  font-family: 'Segoe UI Variable Text', 'Segoe UI', Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.contact-details {
+  display: grid;
+  gap: 0.25rem;
+  font-size: clamp(1.02rem, 2vw, 1.22rem);
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.contact-details p {
+  margin: 0;
+}
+
+.contact-details a {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.contact-details a:hover {
+  color: #c7f000;
 }
 
 .services-section {
@@ -172,7 +202,12 @@ a {
 }
 
 .service-title {
+  width: 100%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   gap: 8px;
+  line-height: 1;
 }
 
 .service-icon {
@@ -183,11 +218,13 @@ a {
   height: 16px;
   flex: none;
   color: #2c3b1b;
+  transform: translateY(1px);
 }
 
 .service-icon svg {
   width: 100%;
   height: 100%;
+  display: block;
   fill: none;
   stroke: currentColor;
   stroke-width: 1.8;
@@ -210,6 +247,15 @@ a {
   .brand-image {
     width: 92%;
     height: 92%;
+  }
+
+  .contact-info {
+    gap: 0.75rem;
+  }
+
+  .contact-details {
+    font-size: 0.98rem;
+    letter-spacing: 0.1em;
   }
 
   .services-grid {
