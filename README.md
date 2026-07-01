@@ -23,7 +23,7 @@ Set these repository secrets before the workflow can deploy:
 - `CLOUDFLARE_API_TOKEN`
 - `CLOUDFLARE_ACCOUNT_ID`
 
-If you deploy from the Cloudflare dashboard, point the project at the repository root, build with `npm run build`, and deploy with Wrangler.
+If you deploy from the Cloudflare dashboard, point the project at the repository root, build with `npm run build`, and deploy with Wrangler. SPA fallback is handled in `src/worker.js`.
 
 ## Stack
 
