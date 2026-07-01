@@ -96,10 +96,10 @@ a {
 
 .brand-image {
   display: block;
-  width: 120%;
-  height: 120%;
+  width: 92%;
+  height: 92%;
   margin: 0 auto;
-  object-fit: cover;
+  object-fit: contain;
   object-position: center;
   filter: drop-shadow(0 0 0 rgba(0, 0, 0, 0));
   transition: transform 220ms ease, filter 220ms ease;
@@ -113,7 +113,7 @@ a {
 }
 
 .construction-card h1 {
-  margin: -0.42em 0 0;
+  margin: 0.55rem 0;
   font-family: 'Segoe UI Variable Text', 'Segoe UI', Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
   font-size: clamp(1.1rem, 2.5vw, 1.6rem);
   font-weight: 300;
@@ -208,8 +208,8 @@ a {
   }
 
   .brand-image {
-    width: 126%;
-    height: 126%;
+    width: 92%;
+    height: 92%;
   }
 
   .services-grid {
