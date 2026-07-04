@@ -31,6 +31,16 @@ function UnderConstructionPage() {
         <section className="services-section" aria-label="What we do">
           <ServiceGrid services={services} />
         </section>
+
+        <div className="location-line" aria-label="Location">
+          <span className="location-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" focusable="false">
+              <path d="M12 21s6-5.1 6-11a6 6 0 1 0-12 0c0 5.9 6 11 6 11Z" />
+              <path d="M12 13.5a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" />
+            </svg>
+          </span>
+          <span>Pittsburgh, PA</span>
+        </div>
       </section>
     </main>
   )
