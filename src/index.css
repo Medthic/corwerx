@@ -200,7 +200,8 @@ a {
 
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(190px, 220px));
+  justify-content: center;
   gap: 14px;
   width: 100%;
   justify-items: stretch;
