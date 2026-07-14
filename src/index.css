@@ -200,7 +200,7 @@ a {
 
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(190px, 220px));
+  grid-template-columns: repeat(auto-fit, minmax(220px, 270px));
   justify-content: center;
   gap: 14px;
   width: 100%;
@@ -208,8 +208,12 @@ a {
 }
 
 .service-card {
+  --service-accent: var(--palette-navy);
   min-height: 34px;
-  padding: 5px 6px;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
   border-radius: 8px;
   text-align: center;
   border: 1px solid rgba(228, 228, 228, 0.18);
@@ -220,6 +224,7 @@ a {
 }
 
 .service-card:hover {
+  --service-accent: var(--palette-lime-deep);
   transform: translateY(-2px);
   border-color: rgba(180, 239, 0, 0.24);
   background: var(--palette-gray-light);
@@ -229,15 +234,18 @@ a {
     0 12px 34px rgba(0, 0, 0, 0.16);
 }
 
+.service-card--facilities:hover {
+  --service-accent: #2a9fd6;
+}
+
 .service-card h2 {
   margin: 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 100%;
   font-family: 'Segoe UI Variable Text', 'Segoe UI', Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-  font-size: 0.84rem;
-  font-weight: 600;
+  font-size: 0.92rem;
+  font-weight: 800;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--palette-navy);
@@ -252,12 +260,58 @@ a {
   line-height: 1;
 }
 
+.service-subservices {
+  margin: 0;
+  padding-left: 18px;
+  list-style: none;
+  text-align: left;
+  color: var(--palette-navy);
+  font-family: 'Segoe UI Variable Text', 'Segoe UI', Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+
+.service-subservices li {
+  position: relative;
+  padding-left: 12px;
+}
+
+.service-subservices li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.56em;
+  width: 4px;
+  height: 4px;
+  border-radius: 2px;
+  background: rgba(21, 27, 38, 0.9);
+  opacity: 1;
+  box-shadow: none;
+  transition: background 180ms ease;
+}
+
+.service-card:hover .service-subservices li::before {
+  background: var(--service-accent);
+}
+
+.service-card--landscape .service-icon,
+.service-card--facilities .service-icon {
+  transform: translateY(-1px);
+}
+
+.service-subservices li + li {
+  margin-top: 7px;
+}
+
 .service-icon {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 16px;
-  height: 16px;
+  width: 20px;
+  height: 20px;
   flex: none;
   color: var(--palette-navy);
   transform: translateY(1px);
@@ -272,6 +326,13 @@ a {
   stroke-width: 1.8;
   stroke-linecap: round;
   stroke-linejoin: round;
+}
+
+.service-icon img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: contain;
 }
 
 @media (max-width: 720px) {

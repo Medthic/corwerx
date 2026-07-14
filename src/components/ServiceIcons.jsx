@@ -1,9 +1,9 @@
+import outdoorServicesIcon from '../assets/OSIcon.png'
+import mechanicalServicesIcon from '../assets/MSIcon.png'
+
 function LandscapeIcon() {
   return (
-    <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-      <path d="M5 19c3-7 7-11 14-13-2 7-6 11-13 13H5Z" />
-      <path d="M8 16c2-1 4-3 6-6" />
-    </svg>
+    <img src={outdoorServicesIcon} alt="" loading="lazy" />
   )
 }
 
@@ -20,13 +20,7 @@ function ManagementIcon() {
 
 function FacilitiesIcon() {
   return (
-    <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-      <path d="M4 19h16" />
-      <path d="M6 19V8l6-3 6 3v11" />
-      <path d="M10 19v-5h4v5" />
-      <path d="M9 10h1" />
-      <path d="M14 10h1" />
-    </svg>
+    <img src={mechanicalServicesIcon} alt="" loading="lazy" />
   )
 }
 
